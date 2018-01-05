@@ -1,0 +1,5 @@
+-- 替换-Dfile后地址为本地jar包地址，会自动copy进仓库。
+mvn install:install-file -DgroupId=com.iflytek -DartifactId=msc -Dversion=1.0 -Dfile=D:\Java_voice_1019_5a4af9c5\lib\lib\Msc.jar -Dpackaging=jar
+mvn install:install-file -DgroupId=com.iflytek -DartifactId=json -Dversion=1.0 -Dfile=D:\Java_voice_1019_5a4af9c5\lib\lib\json-jena-1.0.jar -Dpackaging=jar
+
+-- 几个so和dll文件必须和导出来的jar包在统计目录

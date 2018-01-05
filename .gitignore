@@ -1,0 +1,27 @@
+target/
+logs/
+*.log
+!.mvn/wrapper/maven-wrapper.jar
+bower_components
+node_modules
+.sonar/
+.scannerwork/
+
+
+### Eclipse ###
+.classpath
+msc
+.project
+.settings
+.externalToolBuilders
+.bpmn
+
+### IntelliJ IDEA ###
+.idea
+msc
+*.iws
+*.iml
+*.ipr
+Alfred.iml
+sonar-project.properties
+/bin/
