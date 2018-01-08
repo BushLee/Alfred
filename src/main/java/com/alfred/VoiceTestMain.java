@@ -10,8 +10,6 @@ import org.apache.http.message.BasicNameValuePair;
  */
 public class VoiceTestMain {
     public static void main(String[] args) {
-        String dir = System.getProperty("user.dir");
-        System.out.println(dir);
         ThinkModule thinkModule = buildThinkModule();
         SpeakModule speakModule = new SpeakModule();
         ListenModule listenModule = new ListenModule();

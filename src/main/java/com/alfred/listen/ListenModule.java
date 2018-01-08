@@ -12,6 +12,7 @@ import org.apache.commons.lang3.StringUtils;
  */
 public class ListenModule {
     private static final String APP_ID = "=5a4af9c5";
+    private static boolean isWakeup = false;
 
     public ListenModule() {
         SpeechUtility.createUtility(SpeechConstant.APPID + APP_ID);
@@ -74,8 +75,9 @@ public class ListenModule {
 
             public void onError(SpeechError speechError) {
                 System.out.println(speechError);
-                //mIat.stopListening();
-                //mIat.startListening(this);
+                speakModule.speakResult("语音识别输入错误");
+                mIat.stopListening();
+                mIat.startListening(this);
             }
 
             public void onEvent(int i, int i1, int i2, String s) {

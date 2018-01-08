@@ -23,12 +23,6 @@ public class ThinkModule {
     private List<BasicNameValuePair> formParams = new ArrayList<>();
     private CloseableHttpClient httpClient;
     private CloseableHttpResponse response;
-    private static List<String> wakeupWorks = new ArrayList<>();
-
-    static {
-        wakeupWorks.add("阿福");
-        wakeupWorks.add("狗贼");
-    }
 
     public ThinkModule buildFormParams(BasicNameValuePair basicNameValuePair) {
         formParams.add(basicNameValuePair);
@@ -38,7 +32,7 @@ public class ThinkModule {
     public String thinking(String input) {
         String result = defaultResult;
         try {
-            result = useTulingRebort(input);
+            result = useTulingRobot(input);
         } catch (IOException e) {
             System.out.println(e);
         } finally {
@@ -53,11 +47,7 @@ public class ThinkModule {
         return result;
     }
 
-    private Map<String, String> startWords(String input) {
-        return null;
-    }
-
-    private String useTulingRebort(String input) throws IOException {
+    private String useTulingRobot(String input) throws IOException {
         httpClient = HttpClients.createDefault();
         HttpPost post = new HttpPost(url);
         UrlEncodedFormEntity uefEntity;

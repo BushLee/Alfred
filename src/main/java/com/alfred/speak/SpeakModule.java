@@ -14,7 +14,6 @@ public class SpeakModule {
         mTts.setParameter(SpeechConstant.VOICE_NAME, "vixf");
         mTts.setParameter(SpeechConstant.SPEED, "50");
         mTts.setParameter(SpeechConstant.VOLUME, "80");
-        System.out.println(result);
         mTts.startSpeaking(result, new SynthesizerListener() {
             public void onBufferProgress(int i, int i1, int i2, String s) {
             }
